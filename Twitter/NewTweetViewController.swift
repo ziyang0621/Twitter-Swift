@@ -72,7 +72,7 @@ class NewTweetViewController: UIViewController,UINavigationBarDelegate {
     }
     
     func sendTweet() {
-        var param = ["text" : statusTextView.text, "screen_name": "tan90test"]
+        var param = ["status" : statusTextView.text]
         TwitterClient.sharedInstance.composeCompletionWithParams(param, completion: { (tweets, error) -> () in
             if error != nil {
                 println(error)
